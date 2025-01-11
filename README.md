@@ -4,6 +4,7 @@
 
 ![arkanoid](https://img.shields.io/github/v/tag/PAIA-Playful-AI-Arena/arkanoid)
 [![Python 3.9](https://img.shields.io/badge/python->3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)](https://www.python.org/downloads/release/python-3100/)
 [![MLGame](https://img.shields.io/badge/MLGame->10.4.6a2-<COLOR>.svg)](https://github.com/PAIA-Playful-AI-Arena/MLGame)
 
 
@@ -77,7 +78,8 @@ game = Arkanoid(level=3, level_file=None)
 
 
 ## 切球機制
-![切球機制](https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/game-web-readme/dev/arkanoid/images/side2.png)
+
+![切球機制](https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/game-web-readme/dev/arkanoid/images/side2_fixed.png)
 - 球的 `X軸` 速度會因為接球時板子的移動方向而改變：
   1. 板子與球的移動方向`相同`，球的 `X軸` 速度會增為 `±10`，可以一次打掉硬磚塊
   2. 板子與球的移動方向`相反`，球會被打回`反方向`，速度為 `±7`
@@ -97,7 +99,12 @@ game = Arkanoid(level=3, level_file=None)
 
 ```bash
 # 在 arkanoid 資料夾中打開終端機 
- python -m mlgame -i ./ml/ml_play_template.py . --difficulty NORMAL --level 5 
+ python -m mlgame -i ./ml/ml_play_template.py . --level 5
+```
+### 參數
+`-f`: 控制FPS eg(120FPS):
+```bash
+python -m mlgame -i ./ml/ml_play_template.py . -f 120 --level 5
 ```
 
 ## ＡＩ範例
